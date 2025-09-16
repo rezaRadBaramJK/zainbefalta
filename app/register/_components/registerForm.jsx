@@ -16,6 +16,7 @@ import { registerUser } from "@/services/user/registerUser";
 const initialValues = {
   fullName: "",
   age: 18,
+  email: "",
   PhoneNumber: "",
   TikTokUserName: "",
   Categories: [],
@@ -31,6 +32,9 @@ const validationSchema = Yup.object({
     .min(0, "القيمة غير صالحة | Min is 0")
     .max(120, "القيمة غير صالحة | Max is 120")
     .required("العمر مطلوب | Age is required"),
+  email: Yup.string()
+    .email()
+    .required("البريد الإلكتروني مطلوب | Email Is Required"),
   PhoneNumber: Yup.string()
     .matches(/^[0-9]{8,15}$/, "الرجاء إدخال رقم هاتف صالح (8–15 أرقام)")
     .required("رقم الهاتف مطلوب | Phone number is required"),
@@ -182,7 +186,16 @@ const RegisterForm = () => {
                 </>
               }
             />
-
+            <FormikInput
+              id={"email"}
+              name={"email"}
+              label={
+                <>
+                  <p className={englishLabel}>*E-Mail Address:</p>
+                  <p className={arabicLabel}>:البريد الإلكتروني *</p>
+                </>
+              }
+            />
             {/* Luxury multi-select (react-select) */}
             <FormikLuxMultiSelect
               id="Categories"

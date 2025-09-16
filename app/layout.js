@@ -1,28 +1,28 @@
 import "./globals.css";
 import MainLayout from "@/components/layout/mainLayout";
-import {Almarai, Poppins} from "next/font/google";
-import localFont from 'next/font/local';
+import { Almarai, Poppins } from "next/font/google";
+import localFont from "next/font/local";
 import ReactToastifyProvider from "@/provider/ReactToastifyProvider";
 
 export const metadata = {
-  title: "Zain x Nuqat",
-  description: "Zain x Nuqat",
+  title: "Falta Arena - ساحة فلته",
+  description:
+    "Where Challenges Begin and Champions Rise - هنا يبدأ التحدي.. وهنا يصنع الأبطال",
 };
 
-
 const almarai = Almarai({
-  weight: ['300', '400', '700', '800'],
-  subsets: ['arabic'],
-  display: 'swap',
+  weight: ["300", "400", "700", "800"],
+  subsets: ["arabic"],
+  display: "swap",
   variable: "--font-almarai",
 });
 
 const poppins = Poppins({
-  subsets: ['latin'],
-  weight: ['500'],
+  subsets: ["latin"],
+  weight: ["500"],
   style: "normal",
   variable: "--font-poppins",
-})
+});
 
 const zain = localFont({
   src: [
@@ -48,18 +48,17 @@ const zain = localFont({
     },
   ],
   variable: "--font-zain",
-})
+});
 
-
-export default function RootLayout({children}) {
+export default function RootLayout({ children }) {
   return (
     <html lang="en">
-    <body className={`${zain.variable} ${almarai.variable} ${poppins.variable} font-zain`}>
-      <MainLayout>
-        {children}
-      </MainLayout>
-    <ReactToastifyProvider/>
-    </body>
+      <body
+        className={`${zain.variable} ${almarai.variable} ${poppins.variable} font-zain`}
+      >
+        <MainLayout>{children}</MainLayout>
+        <ReactToastifyProvider />
+      </body>
     </html>
   );
 }

@@ -10,24 +10,16 @@ const Page = async ({ params }) => {
 
   return (
     <div className="page-container pt-[49px]">
-      <div className="w-full h-auto flex flex-col items-center text-content text-center z-10">
-        <p className="text-[30px] font-extrabold  leading-[35px]" dir={"rtl"}>
-          مبروك!
-          <br />
-          تم تسجيلك في بطولة
-          <br />
-          زين X نقاط
-          <br />
-        </p>
-        <p className="mt-5 text-[30px] font-regular  leading-[35px]">
-          Congrats!
-          <br />
-          You Are Now Registered For
-          <br />
-          Zain X Nuqat Competition
-          <br />
-        </p>
-      </div>
+      <p className="w-full text-[#FF4B00] flex flex-col items-center font-regular text-[56px] font-semibold leading-[35px] gap-2 mt-5">
+        ! مـــــــــــبــــــــروك
+      </p>
+      <p className="w-full flex flex-col text-center items-center font-regular text-[24px] leading-[35px] gap-2 ">
+        <br />
+        أنت الآن مسجل في مسابقة فلتة
+        <br />
+        سيتم التواصل معك قريباً
+        <br />
+      </p>
       <div className="size-[114px] mt-[29px] p-1 bg-white z-10">
         <QRCode
           size={60}
