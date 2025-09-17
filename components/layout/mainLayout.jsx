@@ -2,7 +2,8 @@
 import React from "react";
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
-
+import Lottie from "lottie-react";
+import groovyWalkAnimation from "../../public/looti.json";
 const MainLayout = ({ children }) => {
   const router = useRouter();
   const pathname = usePathname();
@@ -27,7 +28,10 @@ const MainLayout = ({ children }) => {
         </div>
       </div>
       <div className="relative w-full flex justify-center items-center z-[10]">
-        <Image src={"/falta-logo.svg"} alt={"nuqat"} width={160} height={160} />
+        {/* <Image src={"/falta-logo.svg"} alt={"nuqat"} width={160} height={160} /> */}
+        <div className="w-[200px] h-[200px] m-auto">
+          <Lottie animationData={groovyWalkAnimation} loop={true} />
+        </div>
       </div>
       {children}
     </div>
