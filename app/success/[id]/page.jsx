@@ -38,15 +38,6 @@ const Page = async ({ params }) => {
           View Your Booking
         </Link>
       </div>
-
-      <div className="absolute bottom-0 start-0 w-[564px] h-[494px] transform -translate-x-[130px] translate-y-[330px] z-[5]">
-        <Image
-          src={"/pages-image.png"}
-          alt={""}
-          fill
-          className="object-cover"
-        />
-      </div>
     </div>
   );
 };
