@@ -30,7 +30,12 @@ const Page = async ({ params }) => {
       </div>
 
       <div className="w-full flex flex-col items-center justify-center mt-[21px] gap-[13px] z-10">
-        <Image src={"/hand-down.png"} alt={""} width={24} height={42} />
+        <Image
+          src={"/finger-pointind-down.svg"}
+          alt={""}
+          width={24}
+          height={42}
+        />
         <Link
           href={getQrValue(id)}
           className="bg-white text-center text-black font-semibold !font-poppins text-[14px] leading-[19px] rounded-2xl px-5 py-[15px] truncate"
